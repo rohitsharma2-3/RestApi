@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="/style.css">
+    <title>Posts</title>
+</head>
+<body>
+    <h1>All Posts</h1>
+    <div class="main">
+        <a href="http://localhost:3000/post/create">Create New Post</a>
+        <br>
+        <br>
+        <div class="container">
+            <% for(let post of posts) { %>
+                <div class="box">
+                    <h3><%= post.content %></h3>
+                    <a href="http://localhost:3000/post/<%= post.id %>">See More</a>&nbsp;&nbsp;&nbsp;
+                    <a href="http://localhost:3000/post/<%= post.id %>/update">Edit</a>
+                    <br>
+                    <br>
+                    <form action="">
+                        <button>delete</button>
+                    </form>
+                </div>
+                <% } %>
+        </div>
+
+    </div>
+</body>
+
+</html>
