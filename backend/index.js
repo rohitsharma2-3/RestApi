@@ -22,7 +22,7 @@ let posts = [{
 }]
 
 app.get('/', (req, res) => {
-  res.redirect('/post');   // ya phir direct render kar sakte ho views/index.ejs ko
+  res.redirect('/post');  
 });
 
 
