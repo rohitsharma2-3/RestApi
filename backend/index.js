@@ -21,6 +21,11 @@ let posts = [{
     content: 'I would to love code'
 }]
 
+app.get('/', (req, res) => {
+  res.redirect('/post');   // ya phir direct render kar sakte ho views/index.ejs ko
+});
+
+
 app.get('/post', (req, res) => {
     res.render('index.ejs', { posts })
 })
